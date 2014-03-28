@@ -42,7 +42,6 @@ build/
 *.pidb
 *.log
 *.scc
-*.mdf
 *.ldf
 
 # Visual C++ cache files
