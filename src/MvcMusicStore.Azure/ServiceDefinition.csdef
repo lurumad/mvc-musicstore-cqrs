@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="MvcMusicStore.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2013-10.2.2">
+  <WebRole name="MvcMusicStore" vmsize="Small">
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="EndpointWeb" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <Endpoints>
+      <InputEndpoint name="EndpointWeb" protocol="http" port="80" />
+    </Endpoints>
+    <Imports>
+      <Import moduleName="Diagnostics" />
+    </Imports>
+    <ConfigurationSettings>
+      <Setting name="MvcMusicStore.Redis.ConnectionString" />
+      <Setting name="MvcMusicStore.Redis.EventKey" />
+      <Setting name="MvcMusicStore.Redis.Port" />
+      <Setting name="MvcMusicStore.Redis.Password" />
+      <Setting name="MvcMusicStore.Storage.Account" />
+      <Setting name="MvcMusicStore.Storage.QueueName" />
+      <Setting name="MvcMusicStore.Mongodb.Connectionstring" />
+      <Setting name="MvcMusicStore.Mongodb.Database" />
+    </ConfigurationSettings>
+  </WebRole>
+  <WorkerRole name="MvcMusicStore.EventHandlerWorkerRole" vmsize="Small">
+    <Imports>
+      <Import moduleName="Diagnostics" />
+    </Imports>
+    <ConfigurationSettings>
+      <Setting name="MvcMusicStore.Redis.ConnectionString" />
+      <Setting name="MvcMusicStore.Redis.EventKey" />
+      <Setting name="MvcMusicStore.Redis.Port" />
+      <Setting name="MvcMusicStore.Redis.Password" />
+      <Setting name="MvcMusicStore.Storage.Account" />
+      <Setting name="MvcMusicStore.Storage.QueueName" />
+      <Setting name="MvcMusicStore.Mongodb.Connectionstring" />
+      <Setting name="MvcMusicStore.Mongodb.Database" />
+    </ConfigurationSettings>
+    <LocalResources>
+      <LocalStorage name="DiagnosticStore" sizeInMB="20000" cleanOnRoleRecycle="false" />
+    </LocalResources>
+  </WorkerRole>
+  <WorkerRole name="MvcMusicStore.CacheWorkerRole" vmsize="Small">
+    <Imports>
+      <Import moduleName="Diagnostics" />
+      <Import moduleName="Caching" />
+    </Imports>
+    <LocalResources>
+      <LocalStorage name="DiagnosticStore" sizeInMB="20000" cleanOnRoleRecycle="false" />
+    </LocalResources>
+  </WorkerRole>
+</ServiceDefinition>

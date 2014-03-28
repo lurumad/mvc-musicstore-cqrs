@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<ServiceConfiguration serviceName="MvcMusicStore.WorkerRole" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="3" osVersion="*" schemaVersion="2013-10.2.2">
+  <Role name="MvcMusicStore">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.ClientDiagnosticLevel" value="1" />
+      <Setting name="ServiceBusConnectionString" value="Endpoint=sb://cqrstest-ns.servicebus.windows.net/;SharedAccessKeyName=publisher;SharedAccessKey=ourJlrYiYieRPbQYa8J0OT4yULJduZA9Wjp8OuOPI/E=" />
+      <Setting name="MongodbConnectionstring" value="mongodb://mongo-development:uoB1Gq3cNNrRV4CyiEibrK2twgZrE9TnOWgHc9DmYUQ-@ds035787.mongolab.com:35787/mongo-development" />
+      <Setting name="MongodbDatabase" value="mongo-development" />
+    </ConfigurationSettings>
+  </Role>
+  <Role name="MvcMusicStore.CacheWorkerRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.NamedCaches" value="{&quot;caches&quot;:[{&quot;name&quot;:&quot;default&quot;,&quot;policy&quot;:{&quot;eviction&quot;:{&quot;type&quot;:0},&quot;expiration&quot;:{&quot;defaultTTL&quot;:10,&quot;isExpirable&quot;:true,&quot;type&quot;:1},&quot;serverNotification&quot;:{&quot;isEnabled&quot;:false}},&quot;secondaries&quot;:0}]}" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.DiagnosticLevel" value="1" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.CacheSizePercentage" value="" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.ConfigStoreConnectionString" value="UseDevelopmentStorage=true" />
+    </ConfigurationSettings>
+  </Role>
+  <Role name="Processor">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="ServiceBusConnectionString" value="Endpoint=sb://cqrstest-ns.servicebus.windows.net/;SharedAccessKeyName=publisher;SharedAccessKey=ourJlrYiYieRPbQYa8J0OT4yULJduZA9Wjp8OuOPI/E=" />
+      <Setting name="MongodbConnectionstring" value="mongodb://mongo-development:uoB1Gq3cNNrRV4CyiEibrK2twgZrE9TnOWgHc9DmYUQ-@ds035787.mongolab.com:35787/mongo-development" />
+      <Setting name="MongodbDatabase" value="mongo-development" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>

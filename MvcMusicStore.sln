@@ -1,0 +1,96 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{585E454A-B053-4EFB-B29C-BFFFC04C2A8A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{07959359-EB5D-4C7C-B1D8-7739C3D8FDF6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deploy", "Deploy", "{88269093-86D6-4C63-B5D4-955B198B5DAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcMusicStore.CacheWorkerRole", "src\CacheWorkerRole\MvcMusicStore.CacheWorkerRole.csproj", "{A59B87FE-7693-4709-A76E-514C8881299C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcMusicStore", "src\MvcMusicStore\MvcMusicStore.csproj", "{452384FD-2ECE-4949-AABE-2DB1CA17ACD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcMusicStore.CQRS", "src\MvcMusicStore.CQRS\MvcMusicStore.CQRS.csproj", "{3FD695E0-28C5-4C33-9174-100C87E36899}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcMusicStore.CQRS.Core", "src\MvcMusicStore.CQRS.Core\MvcMusicStore.CQRS.Core.csproj", "{ACE5CEBB-242A-42B7-8B2D-7B753215E87B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcMusicStore.Infrastructure", "src\MvcMusicStore.Infrastructure\MvcMusicStore.Infrastructure.csproj", "{7A830B98-F8E7-42B2-AB6C-5F0409649CE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcMusicStore.Model", "src\MvcMusicStore.Model\MvcMusicStore.Model.csproj", "{3FCDEBAB-EEE8-4E1C-8F1A-0D2C8473D191}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcMusicStore.Infrastructure.Core", "src\MvcMusicStore.Infrastructure.Core\MvcMusicStore.Infrastructure.Core.csproj", "{DE2D2D0A-B7CB-4A3F-84CD-24EC61B61843}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{5FB8E52A-2855-4F57-817E-8D9042A69CAE}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "MvcMusicStore.Azure", "src\MvcMusicStore.Azure\MvcMusicStore.Azure.ccproj", "{A64960AA-A405-4D22-B599-4FB70216CBC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcMusicStore.EventHandlerWorkerRole", "src\MvcMusicStore.EventHandlerWorkerRole\MvcMusicStore.EventHandlerWorkerRole.csproj", "{112A93E3-35D4-41DD-9146-6EB47F39835D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{AB03C271-1F9A-46EA-B18C-251B3E352BCF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A59B87FE-7693-4709-A76E-514C8881299C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A59B87FE-7693-4709-A76E-514C8881299C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A59B87FE-7693-4709-A76E-514C8881299C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A59B87FE-7693-4709-A76E-514C8881299C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{452384FD-2ECE-4949-AABE-2DB1CA17ACD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{452384FD-2ECE-4949-AABE-2DB1CA17ACD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{452384FD-2ECE-4949-AABE-2DB1CA17ACD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{452384FD-2ECE-4949-AABE-2DB1CA17ACD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FD695E0-28C5-4C33-9174-100C87E36899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FD695E0-28C5-4C33-9174-100C87E36899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FD695E0-28C5-4C33-9174-100C87E36899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FD695E0-28C5-4C33-9174-100C87E36899}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACE5CEBB-242A-42B7-8B2D-7B753215E87B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACE5CEBB-242A-42B7-8B2D-7B753215E87B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACE5CEBB-242A-42B7-8B2D-7B753215E87B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACE5CEBB-242A-42B7-8B2D-7B753215E87B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A830B98-F8E7-42B2-AB6C-5F0409649CE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A830B98-F8E7-42B2-AB6C-5F0409649CE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A830B98-F8E7-42B2-AB6C-5F0409649CE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A830B98-F8E7-42B2-AB6C-5F0409649CE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FCDEBAB-EEE8-4E1C-8F1A-0D2C8473D191}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FCDEBAB-EEE8-4E1C-8F1A-0D2C8473D191}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FCDEBAB-EEE8-4E1C-8F1A-0D2C8473D191}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FCDEBAB-EEE8-4E1C-8F1A-0D2C8473D191}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE2D2D0A-B7CB-4A3F-84CD-24EC61B61843}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE2D2D0A-B7CB-4A3F-84CD-24EC61B61843}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE2D2D0A-B7CB-4A3F-84CD-24EC61B61843}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE2D2D0A-B7CB-4A3F-84CD-24EC61B61843}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A64960AA-A405-4D22-B599-4FB70216CBC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A64960AA-A405-4D22-B599-4FB70216CBC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A64960AA-A405-4D22-B599-4FB70216CBC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A64960AA-A405-4D22-B599-4FB70216CBC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{112A93E3-35D4-41DD-9146-6EB47F39835D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{112A93E3-35D4-41DD-9146-6EB47F39835D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{112A93E3-35D4-41DD-9146-6EB47F39835D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{112A93E3-35D4-41DD-9146-6EB47F39835D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3FD695E0-28C5-4C33-9174-100C87E36899} = {585E454A-B053-4EFB-B29C-BFFFC04C2A8A}
+		{ACE5CEBB-242A-42B7-8B2D-7B753215E87B} = {585E454A-B053-4EFB-B29C-BFFFC04C2A8A}
+		{3FCDEBAB-EEE8-4E1C-8F1A-0D2C8473D191} = {585E454A-B053-4EFB-B29C-BFFFC04C2A8A}
+		{7A830B98-F8E7-42B2-AB6C-5F0409649CE4} = {07959359-EB5D-4C7C-B1D8-7739C3D8FDF6}
+		{DE2D2D0A-B7CB-4A3F-84CD-24EC61B61843} = {07959359-EB5D-4C7C-B1D8-7739C3D8FDF6}
+		{A59B87FE-7693-4709-A76E-514C8881299C} = {07959359-EB5D-4C7C-B1D8-7739C3D8FDF6}
+		{112A93E3-35D4-41DD-9146-6EB47F39835D} = {07959359-EB5D-4C7C-B1D8-7739C3D8FDF6}
+		{A64960AA-A405-4D22-B599-4FB70216CBC8} = {88269093-86D6-4C63-B5D4-955B198B5DAA}
+		{452384FD-2ECE-4949-AABE-2DB1CA17ACD6} = {AB03C271-1F9A-46EA-B18C-251B3E352BCF}
+	EndGlobalSection
+EndGlobal

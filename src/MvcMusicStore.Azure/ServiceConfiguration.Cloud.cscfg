@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="MvcMusicStore.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2013-10.2.2">
+  <Role name="MvcMusicStore">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="MvcMusicStore.Redis.ConnectionString" value="127.0.0.1" />
+      <Setting name="MvcMusicStore.Redis.EventKey" value="MvcMusicStore" />
+      <Setting name="MvcMusicStore.Redis.Port" value="6379" />
+      <Setting name="MvcMusicStore.Redis.Password" value="password1" />
+      <Setting name="MvcMusicStore.Storage.Account" value="UseDevelopmentStorage=true" />
+      <Setting name="MvcMusicStore.Storage.QueueName" value="mvcmusicstoreevents" />
+      <Setting name="MvcMusicStore.Mongodb.Connectionstring" value="mongodb://localhost:27017" />
+      <Setting name="MvcMusicStore.Mongodb.Database" value="mvcmusicstore" />
+    </ConfigurationSettings>
+  </Role>
+  <Role name="MvcMusicStore.EventHandlerWorkerRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="MvcMusicStore.Redis.ConnectionString" value="127.0.0.1" />
+      <Setting name="MvcMusicStore.Redis.EventKey" value="MvcMusicStore" />
+      <Setting name="MvcMusicStore.Redis.Port" value="6379" />
+      <Setting name="MvcMusicStore.Redis.Password" value="password1" />
+      <Setting name="MvcMusicStore.Storage.Account" value="UseDevelopmentStorage=true" />
+      <Setting name="MvcMusicStore.Storage.QueueName" value="mvcmusicstoreevents" />
+      <Setting name="MvcMusicStore.Mongodb.Connectionstring" value="mongodb://localhost:27017" />
+      <Setting name="MvcMusicStore.Mongodb.Database" value="mvcmusicstore" />
+    </ConfigurationSettings>
+  </Role>
+  <Role name="MvcMusicStore.CacheWorkerRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.NamedCaches" value="{&quot;caches&quot;:[{&quot;name&quot;:&quot;default&quot;,&quot;policy&quot;:{&quot;eviction&quot;:{&quot;type&quot;:0},&quot;expiration&quot;:{&quot;defaultTTL&quot;:10,&quot;isExpirable&quot;:true,&quot;type&quot;:1},&quot;serverNotification&quot;:{&quot;isEnabled&quot;:false}},&quot;secondaries&quot;:0}]}" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.DiagnosticLevel" value="1" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.CacheSizePercentage" value="" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.ConfigStoreConnectionString" value="UseDevelopmentStorage=true" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>

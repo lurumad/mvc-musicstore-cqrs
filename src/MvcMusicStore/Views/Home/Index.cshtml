@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <p></p>
+    <div class="row">
+        <div class="col-md-3">
+            @{ Html.RenderAction("GenreMenu", "Store"); }
+        </div>
+
+        <div class="col-md-9">
+            <h3>Five Top Selling Albums <span class="label label-default">Buy now!</span></h3>
+            <div class="row">
+                @foreach (var album in Model)
+                {
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail-home">
+                            <div class="caption">
+                                <a href="@Url.Action("Details", "Store", new {id = album.AlbumId})">
+                                    <img alt="@album.Title" src="@album.AlbumArtUrl" />
+                                    <p>@album.Title</p>
+                                </a>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">15 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+        </div>
+
+    </div>
+</div>

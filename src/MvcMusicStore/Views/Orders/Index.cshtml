@@ -1,0 +1,55 @@
+﻿@using System.Globalization
+@model MvcMusicStore.ViewModels.OrdersViewModel
+@{
+    ViewBag.Title = "Shopping Cart";
+}
+
+<br />
+<div class="alert alert-info"><em>Review</em> your cart:</div>
+
+<div id="update-message">
+</div>
+
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">
+        <p class="btn btn-default">
+            Last Orders
+        </p>
+    </div>
+    <!-- Table -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Order Id</th>
+                <th>Order Date</th>
+                <th>Total of items</th>
+                <th>Total</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.LastOrders)
+            {
+                <tr id="row-@item.OrderId">
+                    <td>
+                        @Html.ActionLink(item.OrderId.ToString(CultureInfo.InvariantCulture), "Details", "Orders", new {id = item.OrderId}, null)
+                    </td>
+                    <td>
+                        @item.OrderDate
+                    </td>
+                    <td id="item-count-@item.OrderId">
+                        @item.Items
+                    </td>
+                    <td>
+                        @item.Total
+                    </td>
+                    <td>
+                        <span class="label label-success">Created</span>
+                        <span class="label label-info">Processing</span>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
