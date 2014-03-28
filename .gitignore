@@ -161,9 +161,6 @@ vendor/
 # Sass cache
 .sass-cache/
 
-# CSS Generated files
-*.css
-
 *.orig
 
 # Sublime Text project files
